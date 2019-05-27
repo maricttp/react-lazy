@@ -17,7 +17,7 @@ const routes: RouteType = {
 const AppRouter: React.FunctionComponent<{}> = () => {
     return (<Router>
         {_map(routes, (component: any, key: string) => {
-            return <Route exact={key==="/"} path={key} component={component} />
+            return <Route key={key} exact={key==="/"} path={key} component={component} />
         })}
     </Router>)
 }
