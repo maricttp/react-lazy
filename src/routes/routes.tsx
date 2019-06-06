@@ -11,16 +11,12 @@ type RouteType = {
     [key: string]: GenericComponent
 }
 
-const rootRoute = "/"
+const rootRoute = "/";
 
 const routes: RouteType = {
     [rootRoute]: Home,
-    "/login": Home,
-    "/signup": Home,
-    "/account": Home,
-    "": Home,
     "/suspense": Suspense
-}
+};
 
 const AppRouter: React.FunctionComponent<{}> = () => {
     return (<Router>
@@ -28,6 +24,6 @@ const AppRouter: React.FunctionComponent<{}> = () => {
             return <Route key={key} exact={key===rootRoute} path={key} component={component} />
         })}
     </Router>)
-}
+};
 
 export default AppRouter
