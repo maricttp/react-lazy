@@ -1,10 +1,13 @@
 import React from "react";
+import { compose } from "redux";
 
-export interface SuspenseProps {
+import withScrollToTop from "../../hoc/withScrollToTop";
+
+export type SuspenseProps = {
     
 }
  
-export interface SuspenseState {
+export type SuspenseState = {
     
 }
  
@@ -14,4 +17,4 @@ class Suspense extends React.Component<SuspenseProps, SuspenseState> {
     }
 }
  
-export default Suspense;
+export default compose(withScrollToTop)(Suspense);
