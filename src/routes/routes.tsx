@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { map as _map } from "lodash"
+import { map as _map } from "lodash";
 
 import Home from "../components/home/home.component";
-import Suspense from "../components/suspense/suspense.components";
+import Suspense from "../components/suspense/suspense.component";
 
 type GenericComponent = typeof Home | typeof Suspense
 

@@ -1,10 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import * as serviceWorker from './serviceWorker';
+import LanguageProvider from './components/language/language_provider.component'
+
+class Index extends React.Component<any, any> {
+    render() {
+        return (
+            <LanguageProvider>
+                <App/>
+            </LanguageProvider>
+        )
+    }
+}
+
+
+ReactDOM.render(
+    <Index/>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
