@@ -1,0 +1,17 @@
+.wrapper {
+  width: 49%;
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+      width: 180px;
+      text-align: center;
+      margin: 10px 0;
+
+      p {
+        padding: 0 15%;
+      }
+    }
+  }
+}
