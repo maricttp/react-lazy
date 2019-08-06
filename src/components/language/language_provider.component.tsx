@@ -32,7 +32,7 @@ const LanguageSwitcher = () => {
     return (
         <LanguageConsumer>
             {({updateLanguage}: any) => (
-                <select onChange={updateLanguage}>
+                <select style={{margin: "20px 0"}} onChange={updateLanguage}>
                     <option value="en">English</option>
                     <option value="de">Germany</option>
                 </select>
@@ -58,7 +58,7 @@ class LanguageProvider extends React.Component<{}, IState> {
             >
 
                 <IntlProvider locale={this.state.language} messages={messages[this.state.language]}>
-                    <div>
+                    <div style={{margin: "20px 0", textAlign: "center"}}>
                         <LanguageSwitcher/>
                         {this.props.children}
                     </div>
